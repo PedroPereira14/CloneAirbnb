@@ -1,0 +1,22 @@
+import React from 'react';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import SearchResultScreen from '../screens/SearchResults';
+import SearchResultMap from '../screens/SearchResultMap';
+
+const Tab = createMaterialTopTabNavigator();
+
+const SearchResultTabNavigator = (props) => {
+    return(
+        <Tab.Navigator tabBarOptions={{
+            activeColorTint: '#f15454',
+            indicatorStyle: {
+                backgroundColor:'#f15454'
+            }
+        }}>
+            <Tab.Screen name={"list"}component={SearchResultScreen} />
+            <Tab.Screen name={"map"}component={SearchResultMap} />
+        </Tab.Navigator>
+    );
+}
+
+export default SearchResultTabNavigator;
